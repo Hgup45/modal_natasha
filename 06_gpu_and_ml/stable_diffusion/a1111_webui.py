@@ -51,7 +51,7 @@ def wait_for_port(port: int):
         "git clone --depth 1 --branch v1.7.0 https://github.com/AUTOMATIC1111/stable-diffusion-webui /webui",
         "python -m venv /webui/venv",
         "cd /webui && . venv/bin/activate && "
-        + "python -c 'from modules import launch_utils; launch_utils.prepare_environment()' --xformers",
+        + "python -c 'from modules import launch_utils; launch_utils.prepare_environment()' --xformers --autolaunch",
         gpu="a10g",
     )
     .run_commands(
